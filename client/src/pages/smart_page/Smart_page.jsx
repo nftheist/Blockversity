@@ -9,8 +9,8 @@ const Smart_page=()=>{
             <div className="wall"></div>
             <div className="smart_main">
                 <div className="buttons">
-                    <button class="btn_nav btn-15">Connect Wallet</button>
-                    <button class="btn_nav btn-15">Signup/login</button>
+                    <button className="btn_nav btn-15">Connect Wallet</button>
+                    <button className="btn_nav btn-15">Signup/login</button>
                 </div>
             </div>
             <div className="smart_title">THE SMART OWLS COLLECTION</div>

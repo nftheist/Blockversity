@@ -15,7 +15,6 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import * as React from 'react';
 
-
 const Home =()=>{
     const [open, setOpen] = React.useState(false);
     const [open1, setOpen1] = React.useState(false);
@@ -108,8 +107,8 @@ const Home =()=>{
             <Navbar/>
             <div className="wall"></div>
             <div className="buttons">
-                <button class="btn_nav btn-15">Connect Wallet</button>
-                <button class="btn_nav btn-15">Signup/login</button>
+                <button className="btn_nav btn-15">Connect Wallet</button>
+                <button className="btn_nav btn-15">Signup/login</button>
             </div>
             <div className="knowledge_section">
                 <div className="knowledge_box">
@@ -134,7 +133,7 @@ const Home =()=>{
                         <div className="wisdom-content">Join the VIP list to access the private sale one-time offer With just 650 owls available to the private sale, this is your chance to seize the extraordinary benefits that await.</div>
                         <div className="wisdom-content">Buy to hold, sell or give away but don’t miss out! Add your name to the VIP list to get notified when the sale starts</div>
                     </div>
-                    <button class="button_vip btn-15">Add me to the VIP list</button>
+                    <button className="button_vip btn-15">Add me to the VIP list</button>
                 </div>
             </div>
             <div className="collection">

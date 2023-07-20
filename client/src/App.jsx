@@ -6,24 +6,13 @@ import Smart from "./pages/smart/Smart";
 import Brilliant_page from "./pages/brilliant_page/Brilliant_page";
 import Clever_page from "./pages/clever_page/Clever_page";
 import Smart_page from "./pages/smart_page/Smart_page";
-import { NiftoryProvider, useNiftoryClient, useNftListingQuery} from "@niftory/sdk/react"
-import { NiftoryClient } from "@niftory/sdk"
-import { useMemo } from 'react';
-
+import { NiftoryProvider } from "@niftory/sdk/react";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-
+import client from './niftoryclient';
 
 function App() {
 
-  const authToken = ""
-  const client = useMemo(() => {
-    return new NiftoryClient({
-      appId: import.meta.env.NEXT_PUBLIC_CLIENT_ID,
-      environmentName:"testnet",
-      apiKey: import.meta.env.NEXT_PUBLIC_API_KEY,
-      authToken,
-    })
-  }, [authToken])
+ 
 
   return (
     <NiftoryProvider client={client}>
@@ -40,9 +29,7 @@ function App() {
       </Routes>
       </BrowserRouter>
     </div>
-
     </NiftoryProvider>
-   
   )
 }
 
