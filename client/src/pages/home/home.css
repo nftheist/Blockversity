@@ -1,0 +1,407 @@
+
+.home{
+    background: linear-gradient(118deg, #000 5.21%, #7A5CDF 47.40%, #D0BDFF 100%), #FFF;
+    overflow-x: hidden !important;
+    height:auto;
+    padding-bottom:10%;
+    width:100vw;
+   position: absolute;
+   left:0;
+   top: 0;
+}
+.wall{
+    position: relative;
+    width:1vw;
+    height:25vw;
+    flex-shrink: 0;
+    margin: 0px;
+    padding:0px;
+}
+
+/* buttons */
+
+  .buttons{
+    
+    background-color: #0c0a0c;
+    
+  }
+  .btn_nav{
+    float: right;
+  }
+  .btn-15 {
+    
+    margin-top: 1%;
+    
+    margin-right: 4%;
+    margin-bottom: 0%;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.8vw 2vw;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    outline: none;
+    background: #C05DEE;
+    border: none;
+    z-index: 1;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #7c04b3;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+
+
+  /* knowledge section */
+
+  .knowledge_section{
+  margin-top: 10%;
+  border: #FFF 2px solid;
+  margin-left: 4%;
+  margin-right: 4%;
+  }
+  .knowledge_box{
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+    display: flex;
+    
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.6vw;
+  }
+  .knowledge_down{
+    margin-top:5%;
+    margin-bottom: 2.5%;
+  }
+  .knowledge_top{
+    margin-top:2.5%;
+  }
+  .hash{
+    position:absolute;
+    height:3vw;
+    width:3vw;
+    background: url("../../assets/hash.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    bottom:-2%;
+    right:-33%;
+}
+.wisdom{
+    display: flex;
+    flex-direction: row;
+    margin-top:10%;
+}
+.wisdom-img{
+    height: 50vw;
+    flex:30%;
+    margin-top: -5vw;
+
+   
+    
+}
+.wisdom-imgbox{
+    position: relative;
+    background: url("../../assets/owl.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 100%;
+    width:100%;
+
+}
+.wisdom-box{
+    height: 45vw;
+    flex:65%;
+    margin-right:4%;
+}
+.wisdom-boxtext{
+    border:white 1px solid;
+    margin-left: -5vw;
+    height:38vw;
+}
+.wisdom-content{
+color: #FFF;
+text-align: center;
+font-size: 2.2vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 500;
+line-height: 2.2vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+margin-bottom:4% ;
+margin-top: 2%;
+margin-left: 2%;
+margin-right: 2%;
+}
+
+.button_vip{
+    font-size: 1.5vw;
+    margin-left:20vw ;
+    margin-right:20vw ;
+
+}
+
+.collection{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top:8%;
+}
+.collection_card{
+    flex:33%;
+    background-color: #000;
+    height:auto;
+    width:25%;
+}
+.card2{
+    margin-left: 8%;
+    margin-right:8% ;
+    padding-bottom: 4vw;
+    border-top: 1px solid var(--gray-200, #E2E8F0);
+    background: #C05DEE;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    
+}
+.card1{
+    border-top: 1px solid var(--gray-200, #E2E8F0);
+    background: #8696FE;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    padding-bottom: 4vw;
+
+}
+.card3{
+    border: 1px solid var(--gray-200, #E2E8F0);
+    background: #5E04CF;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    padding-bottom: 4vw;
+    
+}
+.collection_card_title{
+    color: #FFF;
+text-align: center;
+font-size: 2vw;
+font-family: Inter;
+font-style: normal;
+font-weight: 800;
+line-height: 3vw;
+margin-top:2vw;
+padding-top:5%;
+padding-bottom:5%;
+border:white solid 1px;
+border-radius: 0.7vw;
+margin-left: 4vw;
+margin-right: 4vw;
+margin-bottom: 2vw;
+}
+
+.line1{
+    width:100%;
+    height:8px;
+    background-color: #7c04b3;
+}
+.collection_card_circle{
+    display: flex;
+    margin-top: 2vw;
+    overflow: hidden;
+    padding-top: 2vw;
+
+}
+.collection_card_circle1{
+    
+    height:18vw;
+    flex:30%;
+    margin-right:-3vw;
+
+}
+.collection_card_circle2{
+    margin-top: -0.28vw;
+    height:17.4vw;
+    flex:30%;
+
+}
+.collection_card_circle3{
+    margin-left:-4vw;
+    height:18.8vw;
+    flex:30%;
+    transform: rotate(-1.844deg);
+    margin-top: -0.4vw;
+
+}
+
+.membership_card{
+    margin-top:3vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: white solid 1px;
+    border-radius:0.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top:1vw ;
+    padding-bottom:1vw ;
+}
+.membership{
+    color: #FFF;
+text-align: center;
+font-size: 1.5vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 800;
+line-height: 2vw;
+}
+.value{
+    margin-top: 1vw;
+    margin-left: 2vw;
+    margin-right:2vw ;
+    color: #5E04CF;
+    border-radius: 0.4vw;
+text-align: center;
+font-size: 1.5vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 800;
+line-height: 2vw;
+background-color: white;
+}
+.about_membership{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:2vw ;
+    margin-right:2vw ;
+    margin-top: 2vw;
+}
+.about_membership_pt{
+    color: #FFF;
+font-size: 1vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 400;
+line-height: 1.3vw;
+margin-bottom: 1vw;
+}
+.collection_dropdown{
+    margin-top: 2vw;
+}
+.collection_dropline{
+    margin-left: 2vw;
+    background-color: #00000000;
+    border-top:1px white solid;
+    border-bottom:1px white solid;
+    border-left:0px white solid;
+    border-right:0px white solid;
+    padding-left:0px;
+    padding-top:0.5vw ;
+    padding-bottom: 0.5vw;
+    color: #FFF;
+    font-size: 1.1vw;
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 1vw;
+    width:22vw;
+    text-align: left;
+}
+.collection_menu-item{
+    font-size: 1.2vw;
+}
+@media only screen and (max-width: 800px) {
+    .line1{
+        height:1vw;
+
+    }
+}
+
+.collection_arrow{
+    background: url("../../assets/arrow.svg");
+    background-size: contain;
+    width: 1vw;
+    height:1vw;
+    float: right;
+}
+.collection_text{
+    float: left;
+}
+.collection_menu{
+    margin-left: 2vw;
+    margin-top: 0.5vw;
+
+}
+.collection_menu-item{
+    color:white;
+    margin-top: 0.5vw;
+}
+
+.cards21{
+    height:18vw;
+    flex:30%;
+    margin-right:-3vw;
+    margin-left: -1vw;
+}
+.cards22{
+    margin-top: 0.1vw;
+    height:16.4vw;
+    flex:30%;
+    margin-left:-0.5vw;
+
+}
+.cards23{
+    margin-left:-4.5vw;
+    height:18.3vw;
+    flex:30%;
+    transform: rotate(-2.844deg);
+    margin-top: -0.1vw;   
+}
+
+.cards11{
+    height:18vw;
+    flex:30%;
+    margin-right:-3vw;
+    margin-left: -1vw;
+}
+.cards12{
+    margin-top: 0.1vw;
+    height:16vw;
+    flex:30%;
+    margin-right: 1vw;
+}
+.cards13{
+    height:17.8vw;
+    flex:30%;
+    margin-top: -0.1vw;
+    transform: rotate(-2.844deg);
+}

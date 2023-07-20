@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@niftory/sdk": "^0.0.4",
+    "react-bootstrap": "^2.8.0",
+    "react-dropdown": "^1.11.0",
+    "rsuite": "^5.36.0"
+  }
+}
