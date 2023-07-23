@@ -10,8 +10,8 @@ import image7 from "../../assets/brilliant1.svg";
 import image8 from "../../assets/brilliant2.svg";
 import image9 from "../../assets/brilliant3.svg";
 //import { Dropdown } from 'rsuite';
-import {ButtonToolbar} from 'react-bootstrap';
-import Dropdown from 'react-dropdown';
+// import {ButtonToolbar} from 'react-bootstrap';
+// import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import * as React from 'react';
 
