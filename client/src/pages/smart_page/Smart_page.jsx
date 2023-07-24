@@ -1,7 +1,6 @@
 import "./smart_page.css";
 import Navbar from "../../components/navbar/Navbar"
 import image7 from "../../assets/brilliant/brilliant5.svg";
-import WalletButtons from "../../components/navbar/ConnectWallet";
 const Smart_page=()=>{
     return(
         <div className="smart_page">
@@ -9,7 +8,7 @@ const Smart_page=()=>{
             <div className="wall"></div>
             <div className="smart_main">
                 <div className="buttons">
-                    <WalletButtons />
+                    {/* Use Here the Conncet Wallet Button */}
                     <button className="btn_nav btn-15">Signup/login</button>
                 </div>
             </div>

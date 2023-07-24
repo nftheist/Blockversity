@@ -9,26 +9,40 @@ import Smart_page from "./pages/smart_page/Smart_page";
 import { NiftoryProvider } from "@niftory/sdk/react";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import client from './niftoryclient';
+import GetLatestBlock from './components/Wallet/GetLatestBlock';
+import styled from 'styled-components'
+import Authenticate from "./components/Wallet/Authenticate"
+import SendTransaction from "./components/Wallet/SendTransaction"
+
+
+const Wrapper = styled.div`
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+`;
 
 function App() {
 
- 
-
   return (
     <NiftoryProvider client={client}>
-       <div className="mains">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/brilliant" element={<Brilliant/>}/>
-        <Route path="/clever" element={<Clever/>}/>
-        <Route path="/smart" element={<Smart/>}/>
-        <Route path="/brilliant/:id" element={<Brilliant_page/>}/>
-        <Route path="/clever/:id" element={<Clever_page/>}/>
-        <Route path="/smart/:id" element={<Smart_page/>}/>
-      </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="mains">
+     
+        <Wrapper>
+          <GetLatestBlock />
+          <Authenticate />
+          <SendTransaction />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/brilliant" element={<Brilliant/>}/>
+              <Route path="/clever" element={<Clever/>}/>
+              <Route path="/smart" element={<Smart/>}/>
+              <Route path="/brilliant/:id" element={<Brilliant_page/>}/>
+              <Route path="/clever/:id" element={<Clever_page/>}/>
+              <Route path="/smart/:id" element={<Smart_page/>}/>
+            </Routes>
+          </BrowserRouter>
+        </Wrapper>
+      </div>
     </NiftoryProvider>
   )
 }
