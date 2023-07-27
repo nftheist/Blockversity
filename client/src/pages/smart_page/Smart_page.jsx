@@ -1,15 +1,25 @@
 import "./smart_page.css";
 import Navbar from "../../components/navbar/Navbar"
 import image7 from "../../assets/brilliant/brilliant5.svg";
+<<<<<<< HEAD
 import Authenticate from "../../components/Wallet/Authenticate";
 
+=======
+>>>>>>> 661d41d47a559d2d9d55c980d8179cda2ee3ce7d
 const Smart_page=()=>{
     return(
         <div className="smart_page">
             <Navbar/>
             <div className="wall"></div>
             <div className="smart_main">
+<<<<<<< HEAD
             <Authenticate />
+=======
+                <div className="buttons">
+                    {/* Use Here the Conncet Wallet Button */}
+                    <button className="btn_nav btn-15">Signup/login</button>
+                </div>
+>>>>>>> 661d41d47a559d2d9d55c980d8179cda2ee3ce7d
             </div>
             <div className="smart_title">THE SMART OWLS COLLECTION</div>
                 <div className="about_smart">
