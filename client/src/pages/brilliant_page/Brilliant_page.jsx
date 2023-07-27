@@ -1,6 +1,7 @@
 import "./brilliant_page.css";
 import Navbar from "../../components/navbar/Navbar"
 import image7 from "../../assets/brilliant/brilliant5.svg";
+import Authenticate from "../../components/Wallet/Authenticate";
 
 const Brilliant_page=()=>{
     return(
@@ -8,10 +9,7 @@ const Brilliant_page=()=>{
             <Navbar/>
             <div className="wall"></div>
             <div className="brilliant_main">
-                <div className="buttons">
-                    <button class="btn_nav btn-15">Connect Wallet</button>
-                    <button class="btn_nav btn-15">Signup/login</button>
-                </div>
+               <Authenticate />
             </div>
             <div className="brilliant_title">THE BRILLIANT OWLS COLLECTION</div>
                 <div className="about_brilliant">

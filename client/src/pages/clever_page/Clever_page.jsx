@@ -1,17 +1,14 @@
 import "./clever_page.css";
 import Navbar from "../../components/navbar/Navbar"
 import image7 from "../../assets/brilliant/brilliant5.svg";
-
+import Authenticate from "../../components/Wallet/Authenticate";
 const Clever_page=()=>{
     return(
         <div className="clever_page">
             <Navbar/>
             <div className="wall"></div>
             <div className="clever_main">
-                <div className="buttons">
-                    <button class="btn_nav btn-15">Connect Wallet</button>
-                    <button class="btn_nav btn-15">Signup/login</button>
-                </div>
+                <Authenticate />
             </div>
             <div className="clever_title">THE CLEVER OWLS COLLECTION</div>
                 <div className="about_clever">

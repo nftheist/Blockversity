@@ -9,6 +9,7 @@ import image6 from "../../assets/clever3.svg";
 import image7 from "../../assets/brilliant1.svg";
 import image8 from "../../assets/brilliant2.svg";
 import image9 from "../../assets/brilliant3.svg";
+import Authenticate from "../../components/Wallet/Authenticate";
 //import { Dropdown } from 'rsuite';
 // import {ButtonToolbar} from 'react-bootstrap';
 // import Dropdown from 'react-dropdown';
@@ -106,10 +107,7 @@ const Home =()=>{
         <div className="home">
             <Navbar/>
             <div className="wall"></div>
-            <div className="buttons">
-                <button className="btn_nav btn-15">Connect Wallet</button>
-                <button className="btn_nav btn-15">Signup/login</button>
-            </div>
+            <Authenticate />
             <div className="knowledge_section">
                 <div className="knowledge_box">
                     <div className="knowledge_top">

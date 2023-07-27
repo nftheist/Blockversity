@@ -4,6 +4,7 @@ import image7 from "../../assets/brilliant/brilliant1.svg";
 import image8 from "../../assets/brilliant/brilliant2.svg";
 import image9 from "../../assets/brilliant/brilliant3.svg";
 import image10 from "../../assets/brilliant/brilliant4.svg";
+import Authenticate from "../../components/Wallet/Authenticate";
 
 const Brilliant=()=>{
     return(
@@ -11,10 +12,7 @@ const Brilliant=()=>{
             <Navbar/>
             <div className="wall"></div>
             <div className="brilliant_main">
-                <div className="buttons">
-                    <button class="btn_nav btn-15">Connect Wallet</button>
-                    <button class="btn_nav btn-15">Signup/login</button>
-                </div>
+            <Authenticate />
             </div>
             <div className="brilliant_title">THE BRILLIANT OWLS COLLECTION</div>
             <div className="brilliant_image_circle">

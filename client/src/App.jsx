@@ -11,24 +11,21 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import client from './niftoryclient';
 
 function App() {
-
- 
-
   return (
     <NiftoryProvider client={client}>
-       <div className="mains">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/brilliant" element={<Brilliant/>}/>
-        <Route path="/clever" element={<Clever/>}/>
-        <Route path="/smart" element={<Smart/>}/>
-        <Route path="/brilliant/:id" element={<Brilliant_page/>}/>
-        <Route path="/clever/:id" element={<Clever_page/>}/>
-        <Route path="/smart/:id" element={<Smart_page/>}/>
-      </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="mains">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/brilliant" element={<Brilliant/>}/>
+              <Route path="/clever" element={<Clever/>}/>
+              <Route path="/smart" element={<Smart/>}/>
+              <Route path="/brilliant/:id" element={<Brilliant_page/>}/>
+              <Route path="/clever/:id" element={<Clever_page/>}/>
+              <Route path="/smart/:id" element={<Smart_page/>}/>
+            </Routes>
+          </BrowserRouter>
+      </div>
     </NiftoryProvider>
   )
 }

@@ -4,17 +4,14 @@ import image7 from "../../assets/brilliant/brilliant1.svg";
 import image8 from "../../assets/brilliant/brilliant2.svg";
 import image9 from "../../assets/brilliant/brilliant3.svg";
 import image10 from "../../assets/brilliant/brilliant4.svg";
-
+import Authenticate from "../../components/Wallet/Authenticate";
 const Smart=()=>{
     return(
         <div className="smart">
             <Navbar/>
             <div className="wall"></div>
             <div className="smart_main">
-                <div className="buttons">
-                    <button class="btn_nav btn-15">Connect Wallet</button>
-                    <button class="btn_nav btn-15">Signup/login</button>
-                </div>
+                <Authenticate />
             </div>
             <div className="smart_title">THE SMART OWLS COLLECTION</div>
             <div className="smart_image_circle">
