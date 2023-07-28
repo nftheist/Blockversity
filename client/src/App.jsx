@@ -9,33 +9,12 @@ import Smart_page from "./pages/smart_page/Smart_page";
 import { NiftoryProvider } from "@niftory/sdk/react";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import client from './niftoryclient';
-import GetLatestBlock from './components/Wallet/GetLatestBlock';
-import styled from 'styled-components'
-import Authenticate from "./components/Wallet/Authenticate"
-import SendTransaction from "./components/Wallet/SendTransaction"
-
-
-const Wrapper = styled.div`
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-`;
 
 function App() {
-<<<<<<< HEAD
-  return (
-    <NiftoryProvider client={client}>
-      <div className="mains">
-=======
 
   return (
     <NiftoryProvider client={client}>
       <div className="mains">
-     
-        <Wrapper>
-          <GetLatestBlock />
-          <Authenticate />
-          <SendTransaction />
->>>>>>> 661d41d47a559d2d9d55c980d8179cda2ee3ce7d
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home/>}/>
@@ -47,10 +26,6 @@ function App() {
               <Route path="/smart/:id" element={<Smart_page/>}/>
             </Routes>
           </BrowserRouter>
-<<<<<<< HEAD
-=======
-        </Wrapper>
->>>>>>> 661d41d47a559d2d9d55c980d8179cda2ee3ce7d
       </div>
     </NiftoryProvider>
   )
