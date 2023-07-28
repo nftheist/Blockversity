@@ -1,4 +1,4 @@
-import LoginButton from "../Buttons";
+import LoginButton from "./Buttons";
 import * as fcl from "@blocto/fcl";
 import "./Config";
 import { useState } from "react";
