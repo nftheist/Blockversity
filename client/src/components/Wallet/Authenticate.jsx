@@ -2,7 +2,7 @@ import LoginButton from "./Buttons";
 import * as fcl from "@blocto/fcl";
 import "./Config";
 import { useState } from "react";
-import "../../pages/home/home.css"
+import "./Buttons.css"
 
 export default function Authenticate () {
     const [currentUser, setUser] = useState({ loggedIn: false, addr: undefined });
