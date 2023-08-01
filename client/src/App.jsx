@@ -10,6 +10,7 @@ import { NiftoryProvider } from "@niftory/sdk/react";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import client from './niftoryclient';
 
+
 function App() {
 
   return (
