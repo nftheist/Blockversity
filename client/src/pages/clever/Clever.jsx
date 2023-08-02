@@ -5,7 +5,7 @@ import image8 from "../../assets/brilliant/brilliant2.svg";
 import image9 from "../../assets/brilliant/brilliant3.svg";
 import image10 from "../../assets/brilliant/brilliant4.svg";
 import Authenticate from "../../components/Wallet/Authenticate";
-import NftModelComponent from "../../components/NFTListings/NftListing"
+import NftModelComponent from "../../components/NFTListings/NFTModel"
 const Clever=()=>{
     return(
         <div className="clever">
