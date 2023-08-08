@@ -3,6 +3,7 @@ import * as fcl from "@blocto/fcl";
 import "./Config";
 import { useState } from "react";
 import "./Buttons.css"
+import RegisterWallet from "./Registerwallet";
 
 export default function Authenticate () {
     const [currentUser, setUser] = useState({ loggedIn: false, addr: undefined });
@@ -24,6 +25,7 @@ export default function Authenticate () {
             <div className="UserAddress">
               {currentUser.addr}
             </div>
+            <RegisterWallet address={currentUser.addr} />
             <LoginButton onClick={logoutHandler}>Logout</LoginButton>
           </div>
         ) : (

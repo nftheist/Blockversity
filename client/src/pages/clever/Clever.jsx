@@ -3,7 +3,6 @@ import Navbar from "../../components/navbar/Navbar"
 import image7 from "../../assets/brilliant/brilliant1.svg";
 import image8 from "../../assets/brilliant/brilliant2.svg";
 import image9 from "../../assets/brilliant/brilliant3.svg";
-import image10 from "../../assets/brilliant/brilliant4.svg";
 import Authenticate from "../../components/Wallet/Authenticate";
 import NftModelComponent from "../../components/NFTListings/NFTModel"
 const Clever=()=>{
@@ -12,14 +11,13 @@ const Clever=()=>{
             <Navbar/>
             <div className="wall"></div>
             <div className="clever_main">
-                <Authenticate />
-                <NftModelComponent />
+                <Authenticate /> 
             </div>
             <div className="clever_title">THE CLEVER OWLS COLLECTION</div>
             <div className="clever_image_circle">
-                <img src={image7} className="clever_circle_image1"></img>
-                <img src={image8} className="clever_circle_image2"></img>
-                <img src={image9} className="clever_circle_image3"></img>
+                <img src={image7} className="clever_circle_image1"/>
+                <img src={image8} className="clever_circle_image2"/>
+                <img src={image9} className="clever_circle_image3"/>
             </div>
             <div className="clever_text"><div>
                 <div className="clever_text_p">Each Owl of this collection unlocks access to a 1-year membership and related benefits.</div>
@@ -38,41 +36,8 @@ const Clever=()=>{
             <button className="interseted_button">Add me to the VIP list</button>
             </div>
 
-            <div className="clever_card_space">
-        
-    
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-                <div className="clever_card">
-                    <img src={image10} className="clever_card_photo"></img>
-                    <div  className="clever_card_text">OWL RUNNER</div>
-                    <button  className="clever_card_buy">BUY NOW</button>
-                </div>
-
-
+            <div >
+                <NftModelComponent setId="8e697312-0e56-404b-b9ce-d867af2389be"/>
             </div>
         
         </div>

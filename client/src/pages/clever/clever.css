@@ -1,3 +1,6 @@
+   /* Import the "Outfit" font from Google Fonts */
+   @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 .wall{
     position: relative;
     width:1vw;
@@ -61,8 +64,7 @@
   }
 
 .clever{
-    background: linear-gradient(136deg, #000 25.21%, #32265b 80.65%, #615483 99.39%), #FFF;
-
+    background: linear-gradient(136deg, #000000 0.5%, #32265b 80.65%, #615483 99.39%), #FFF;
     overflow-x: hidden !important;
     height:auto;
     padding-bottom:10%;
@@ -191,14 +193,17 @@
 
 }
 .clever_card_photo{
-    height:20vw;
-
+    width: 270px; /* Set the initial width to 100% to occupy the parent container */
+    height: 340px; /* Let the height adjust proportionally based on the width */
+    border-radius: 25px;
 }
+
+
 .clever_card_text{
     color: #FFF;
     text-align: center;
     font-size: 1.2vw;
-    font-family: Inter;
+    font-family: "Outfit";
     font-style: normal;
     font-weight: 800;
     line-height: 28px;

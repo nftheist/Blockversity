@@ -1,38 +1,58 @@
-import { useEffect, useState } from 'react';
-import client from '../../niftoryclient';
+import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import { useNftModelsQuery } from "@niftory/sdk/react";
+import "../../pages/clever/clever.css";
 
-function NftModelComponent() {
-  const [nftModel, setNftModel] = useState(null);
-  const [error, setError] = useState(null);
+function NftModelComponent({setId}) {
+  const [nft, setNft] = useState([]);
+  const [cursor, setCursor] = useState(undefined);
 
+  const [data] = useNftModelsQuery({
+    variables: {
+      filter: {
+        setIds: setId
+      },
+      cursor: cursor // Add the cursor variable here
+    }
+  });
+    
   useEffect(() => {
-    const fetchNftModel = async () => {
-      try {
-        const id = 'a67a1378-eb86-455a-82b4-cc445f4011d1'; // replace with your actual model ID
-        const response = await client.getNftModel(id);
-        setNftModel(response);
-      } catch (err) {
-        setError(err);
-        console.error(err);
-      }
-    };
+    if (data?.data?.nftModels) {
+       console.log(data.data.nftModels.items);
+      const fetchedNftItems = data.data.nftModels.items.map(item => ({
+        ...item,
+        name: item.title
+      }));
+      setNft((prevNft) => [...prevNft, ...fetchedNftItems]);
+    }
+  }, [data]);
 
-    fetchNftModel();
-  }, []);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  if (!nftModel) {
-    return <div>Loading...</div>;
-  }
+  const loadMoreData = () => {
+    if (data?.data?.nftModels?.pageInfo?.hasNextPage) {
+      const nextCursor = data.data.nftModels.pageInfo.endCursor;
+      setCursor(nextCursor);
+    }
+  };
 
   return (
-    <div>
-      <img src={nftModel.content.poster.url} alt={nftModel.title} />
-    </div>
+    <div className="clever_card_space">
+    {nft.map(item => (
+      <div key={item.id} className="clever_card">
+        <img src={item.content.poster.url} className="clever_card_photo"></img>
+        <div className="clever_card_text">{item.name}</div>
+        <button className="clever_card_buy">BUY NOW</button>
+      </div>
+    ))}
+    {data?.data?.nftModels?.pageInfo?.hasNextPage && (
+      <button onClick={loadMoreData}>Load More</button>
+    )}
+  </div>
   );
 }
+
+NftModelComponent.propTypes = {
+  setId: PropTypes.string.isRequired,
+};
 
 export default NftModelComponent;
