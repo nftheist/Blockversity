@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRegisterWalletMutation } from '@niftory/sdk/react';
 
 const RegisterWallet = ({ address }) => {
@@ -8,23 +8,21 @@ const RegisterWallet = ({ address }) => {
 
   const [walletRegistered, setWalletRegistered] = useState(false);
 
-  useEffect(() => {
-    const register = async () => {
-      // Call the mutation function with the address
-      const response = await registerWallet({ address });
+  // Call the mutation function with the address
+  const register = async () => {
+    const response = await registerWallet(address);
 
-      // Check for errors
-      if (response.error) {
-        console.error("Error registering wallet:", response.error);
-      } else {
-        console.log("Wallet registered:", response.data);
-        setWalletRegistered(true);
-      }
-    };
-   
-    // Call the register function
-    register();
-  }, [address, registerWallet]);
+    // Check for errors
+    if (response.error) {
+      console.error("Error registering wallet:", response.error);
+    } else {
+      console.log("Wallet registered:", response.data);
+      setWalletRegistered(true);
+    }
+  };
+
+  // Call the register function
+  register();
 
   console.log({data});
   if (fetching) return <p>Registering wallet...</p>;
