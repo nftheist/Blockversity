@@ -3,27 +3,31 @@ import { useFlowUser, useRegisterWalletMutation } from "@niftory/sdk/react";
 import * as fcl from "@onflow/fcl";
 import LoginButton from "./Buttons";
 import "./Buttons.css";
-import "./Config";
+// import "./Config";
 
 export default function Authenticate() {
   const flowUser = useFlowUser();
-  const [{ error }, registerWallet] = useRegisterWalletMutation();
+  const [{ error , fetching, data }, registerWallet] = useRegisterWalletMutation();
 
   useEffect(() => {
     if (flowUser?.loggedIn && flowUser?.addr) {
-      // console.log("Calling registerWallet mutation");
-      console.log("User is logged in:", flowUser?.loggedIn);
-      console.log("User address:", flowUser?.addr);
+      console.log("Attempting to register wallet");
+    
       registerWallet({ address: flowUser.addr })
         .then(() => {
           console.log("Mutation successful");
           console.log("User registered successfully");
+          console.log({ fetching, data, error });
         })
         .catch((error) => {
           console.error("Error registering user:", error);
+          console.log({ fetching, data, error });
         });
+    } else {
+      console.log("User not logged in or no address available");
     }
-  }, [flowUser?.loggedIn, flowUser?.addr, registerWallet]);
+    
+  }, [flowUser?.loggedIn, flowUser?.addr, registerWallet ]);
 
   const handleLogin = () => {
     fcl.logIn();

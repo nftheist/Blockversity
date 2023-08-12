@@ -37,38 +37,8 @@ const Brilliant=()=>{
             <button className="interseted_button">Add me to the VIP list</button>
             </div>
 
-            <div className="brilliant_card_space">
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-                <div className="brilliant_card">
-                    <img src={image10} className="brilliant_card_photo"></img>
-                    <div  className="brilliant_card_text">OWL RUNNER</div>
-                    <button  className="brilliant_card_buy">BUY NOW</button>
-                </div>
-
+            <div>
+                    <NftModelComponent setId="78149802-4581-4cff-b611-541123bba3ed" />
 
             </div>
         
