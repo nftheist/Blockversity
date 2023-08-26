@@ -1,0 +1,250 @@
+.wall{
+    position: relative;
+    width:1vw;
+    height:25vw;
+    flex-shrink: 0;
+    margin: 0px;
+    padding:0px;
+}
+
+/* buttons */
+
+  .buttons{
+    
+    background-color: #0c0a0c;
+    
+  }
+  .btn_nav{
+    float: right;
+  }
+  .btn-15 {
+    
+    margin-top: 1%;
+    
+    margin-right: 4%;
+    margin-bottom: 0%;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.8vw 2vw;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    outline: none;
+    background: #C05DEE;
+    border: none;
+    z-index: 1;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #7c04b3;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+
+  .brilliant_page{
+    background: linear-gradient(136deg, #000 5.21%, #6149b0 85.65%, #615483 99.39%), #FFF;
+    overflow-x: hidden !important;
+    height:auto;
+    padding-bottom:10%;
+    width:100vw;
+    position: absolute;
+    left:0;
+    top: 0;
+  }
+  .about_brilliant{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+  }
+  .by_blockVersity{
+    color: #FFF;
+    font-size: 1.5vw;
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.8vw;
+  }
+  .by_blockVersity_text{
+    color: #FFF;
+font-size: 1.5vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 800;
+line-height: 2vw;
+margin-left: 8vw;
+  }
+
+.brilliant_card_description_box{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10vw;
+  margin-top: 8vw;
+
+}
+.brilliant_card_description_image{
+  height:50vw;
+
+}
+.brilliant_card_description{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vw;
+  margin-left: 10vw;
+}
+.brilliant_card_description_name{
+  color: #FFF;
+  font-size: 3.8vw;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 4vw;
+  text-align: center;
+
+}
+.brilliant_card_description_time{
+  margin-top: 3vw;
+  color: #FFF;
+  font-size: 1.5vw;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.8vw;
+  text-align: center;
+
+}
+.brilliant_card_description_price{
+  color: #FFF;
+font-size: 4vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 500;
+line-height: 2vw;
+margin-top: 5vw;
+  text-align: center;
+}
+.brilliant_card_description_buy{
+  color: #FFF;
+  font-size: 1.8vw;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.8vw;
+  border-radius: 6px;
+  background: var(--purple-500, #805AD5);
+  padding-top:0.5vw;
+  padding-bottom: 0.5vw;
+  margin:1vw auto;
+  margin-top: 5vw;
+  width:20vw;
+}
+.About_Knowledge_Society{
+  margin-left: 10vw;
+  margin-top: 6vw;
+  width:70%;
+}
+.details_card_above{
+  margin-top: 4vw;
+  margin-left: 10vw;
+}
+
+.About_Knowledge_Society_title{
+  color: #FFF;
+font-size: 3.5vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 800;
+line-height: 3.8vw;
+}
+.About_Knowledge_Society_desc{
+  color: #FFF;
+font-size: 2vw;
+font-family: Outfit;
+font-style: normal;
+font-weight: 600;
+line-height: 3vw;
+margin-top: 3vw;
+}
+.About_Knowledge_Society_about{
+  color: #FFF;
+  font-size: 1.8vw;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5vw;
+  margin-top: 3vw;
+}
+
+.more_collection{
+  margin-top: 10vw;
+  margin-left: 10vw; 
+}
+.more_collection_title{
+  color: #FFF;
+font-size: 32px;
+font-family: Outfit;
+font-style: normal;
+font-weight: 800;
+line-height: 28px;
+}
+.more_collection_set{
+  display: flex;
+  flex-direction: row;
+  height: 4vw;
+  margin-top: 4vw;
+  height: 25vw;
+  
+}
+.more_collection_card{
+  height:0.1vw;
+  margin-right:8.5vw;
+}
+.more_collection_image{
+  height:20vw; 
+}
+.more_collection_name{
+  color: #FFF;
+  text-align: center;
+  font-size: 1.4vw;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.8vw;
+  margin-top:0.4vw ;
+}
+.view_more{
+  margin-top: 3vw;
+  display: flex;
+  justify-content: center;
+}
+.view_more_button{
+  background-color: #00000000;
+  padding: 0.5vw 4vw;
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 2vw;
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2vw;
+  border: #fff 1px dashed;
+}
