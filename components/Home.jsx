@@ -11,11 +11,12 @@ import image7 from "../assets/brilliant1.svg";
 import image8 from "../assets/brilliant2.svg";
 import image9 from "../assets/brilliant3.svg";
 import { useRouter } from "next/router";
-import { AppHeader } from "./GoogleAuth";
-import WalletPage from "./wallet";
+import { WalletSetup } from "./WalletSetup/WalletSeup";
+// import AppLayout from "./Applayout";
 // import Authenticate from "../../components/Wallet/Authenticate";
 
 import * as React from 'react';
+import AppLayout from "./Applayout";
 
 const Home =()=>{
     const router  = useRouter();
@@ -110,13 +111,13 @@ const Home =()=>{
 
   
     return(
+        <AppLayout>
+           
         <div className="home">
             <Navbar/>
             <div className="wall">
             </div>
             <div className="authentication">
-            <AppHeader />
-            <WalletPage />
             </div>
             <div className="knowledge_section">
             
@@ -423,6 +424,7 @@ const Home =()=>{
             </div>
             
         </div>
+        </AppLayout>
     );
 };
 export default Home;

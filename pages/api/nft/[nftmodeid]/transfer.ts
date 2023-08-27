@@ -13,6 +13,7 @@ const handler: NextApiHandler = async (req, res) => {
     }
 
     const userToken = await getToken({ req })
+    console.log(userToken);
     if (!userToken) {
       res.status(401).send("You must be signed in to transfer NFTs")
     }
@@ -21,7 +22,7 @@ const handler: NextApiHandler = async (req, res) => {
       res.status(400).send("nftModelId is required")
       return
     }
-    console.log(userToken);
+    
 
     const client = await getNiftoryClientForServer()
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 .home{
-    background: linear-gradient(118deg, #000 5.21%, #7A5CDF 47.40%, #D0BDFF 100%), #FFF;
+    background: linear-gradient(118deg, #000 5.21%, #7A5CDF 47.40%, #D0BDFF 100%), #FFF !important;
     overflow-x: hidden !important;
     height:auto;
     padding-bottom:10%;

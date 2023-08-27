@@ -8,9 +8,7 @@ import Image from "next/image";
 import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
 import styles from '../../../styles/brilliant.module.css';
-import { AppHeader } from "../../../components/GoogleAuth";
 import WalletPage from "../../../components/wallet";
-import { log } from "console";
 
 const Brilliant_page:ComponentWithAuth = () => {
   const router = useRouter();

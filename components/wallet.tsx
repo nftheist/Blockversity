@@ -1,17 +1,14 @@
 import { WalletSetup } from "./WalletSetup/WalletSeup"
 import { ComponentWithAuth } from "./ComponentWithAuth"
-import { AppHeader } from "./GoogleAuth"
+import AppLayout from "../components/Applayout";
 
 const WalletPage: ComponentWithAuth = () => {
-//   <AppHeader>
    return (
-    <>
-     {/* <AppHeader /> */}
+    <AppLayout>
      <WalletSetup />
-    </>
+    </AppLayout>
 
    )
-//   </AppHeader>
    }
 
 WalletPage.requireAuth = true

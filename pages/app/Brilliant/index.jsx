@@ -3,10 +3,7 @@ import Navbar from "../../../components/navbar/Navbar"
 import image7 from "../../../assets/brilliant/brilliant1.svg";
 import image8 from "../../../assets/brilliant/brilliant2.svg";
 import image9 from "../../../assets/brilliant/brilliant3.svg";
-// import image10 from "../../assets/brilliant/brilliant4.svg";
-// import Authenticate from "../../../components/Wallet/Authenticate";
 import NftModelComponent from "../../../components/GetNFTModels/GetNftModels"
-
 
 const Brilliant=()=>{
     return(
@@ -43,7 +40,7 @@ const Brilliant=()=>{
             </div>
         
         </div>
-    );
+        )
 };
 
 export default Brilliant;

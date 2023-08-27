@@ -4,7 +4,6 @@ import image7 from "../../../assets/brilliant/brilliant1.svg";
 import image8 from "../../../assets/brilliant/brilliant2.svg";
 import image9 from "../../../assets/brilliant/brilliant3.svg";
 import NftModelComponent from "../../../components/GetNFTModels/GetNftModels"
-import {AppHeader}  from "../../../components/GoogleAuth";
 const Clever=()=>{
     return(
         <div className="clever">

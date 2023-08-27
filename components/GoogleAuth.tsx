@@ -6,12 +6,11 @@ import WalletPage from "./wallet";
 export function AppHeader() {
     const { session, signOut, signIn } = useAuthContext();
     const router = useRouter();
-
     return (
         <div className="header-container">
             {session ? (
                 <>
-                    <span>User: {session?.user?.email}</span>
+                    <span>User: {session?.user?.email} </span>
                     <div>
                         <button className="button_authenticate" onClick={() => WalletPage}>
                             Wallet

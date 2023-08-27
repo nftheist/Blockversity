@@ -7,6 +7,7 @@ import "../styles/Smart.css";
 import "../styles/Brilliant_page.css"
 import "../styles/Smart_page.css"
 import "../styles/Clever_page.css"
+import "../styles/Applayout.css"
 import React from "react";
 import { SessionProvider } from "next-auth/react"
 import { AppProps as NextAppProps } from "next/app"

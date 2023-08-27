@@ -5,13 +5,11 @@ import axios from "axios"
 import { useAuthContext } from "../../../hooks/useAuthContext"
 import { useNftModelQuery, useWalletQuery, WalletState } from "@niftory/sdk"
 import Image from "next/image";
-// import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
 import styles from '../../../styles/brilliant.module.css';
 import { AppHeader } from "../../../components/GoogleAuth";
 import WalletPage from "../../../components/wallet";
 import Smart_page from "../Smart/[nftmodelid]";
-
 const Clever_page:ComponentWithAuth = () => {
   const router = useRouter();
   const {session,signIn,isLoading:sessionLoading} = useAuthContext();
@@ -63,6 +61,7 @@ const buttonText = session
   
 
   return (
+    
     <div className={styles.container}>
       {/* <Navbar /> */}
       <div className="authentication">
@@ -99,6 +98,7 @@ const buttonText = session
       )}
       <Random setId="8e697312-0e56-404b-b9ce-d867af2389be" basePath="/app/Clever" />
     </div>
+    
   );
 };
 
