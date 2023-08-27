@@ -27,10 +27,11 @@ export  function AuthProvider({ children, requireAuth }: AuthComponentProps) {
 
   const [isAuthenticating, setIsAuthenticating] = useState(false)
   const isLoading = sessionLoading || isAuthenticating
-
+  
   const signIn = useCallback(async () => {
     setIsAuthenticating(true)
-    await nextAuthSignIn("niftory")
+    const a =  await nextAuthSignIn("niftory")
+    console.log(a);
     setIsAuthenticating(false)
   }, [])
 

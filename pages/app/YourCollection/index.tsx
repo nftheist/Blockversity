@@ -1,34 +1,32 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { useAuthContext } from '../../../hooks/useAuthContext';
-import { useNftsQuery } from '@niftory/sdk';
-import styles from '../../../styles/CollectionPage.module.css'; // Import the CSS
+import { useRouter } from "next/router"
+import { useAuthContext } from "../../../hooks/useAuthContext"
+import { useNftsQuery } from "@niftory/sdk"
 
-const CollectionPage = () => {
-  const router = useRouter();
-  const { session } = useAuthContext();
+import { ComponentWithAuth } from "../../../components/ComponentWithAuth"
+
+const CollectionPage: ComponentWithAuth = () => {
+  const router = useRouter()
+  const { session } = useAuthContext()
   //@ts-ignore
-  const _userId: string = session?.userId as string;
-  const [{ data }] = useNftsQuery({ variables: { userId: _userId } });
-  const nfts = data?.nfts?.items;
+  const _userId: string = session?.userId as string
+  const [{ data }] = useNftsQuery({ variables: { userId: _userId } })
+  const nfts = data?.nfts?.items
 
   return (
-    <div className={styles.container}>
-      <div className={styles['nft-box']}>
-        {nfts?.map((nft) => (
-          nft && (
-            <div 
-              key={nft.id} 
-              className={styles['nft-item']}
-              onClick={() => router.push(`/app/collection/${nft.id}`)}
-            >
-              <img src={nft.model?.content.poster.url}></img>
-            </div>
-          )
-        ))}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "16px" }}>
+        {nfts?.map(
+          (nft) =>
+            nft && (
+              <div key={nft.id} style={{ border: "1px solid #ccc", padding: "16px", textAlign: "center" }}>
+                <a onClick={() => router.push(`/app/collection/${nft.id}`)} style={{ cursor: "pointer", textDecoration: "underline" }}>
+                  {nft.model?.title}
+                </a>
+              </div>
+            )
+        )}
       </div>
-    </div>
-  );
-};
+  )
+}
 
-export default CollectionPage;
+CollectionPage.requireAuth = true
+export default CollectionPage

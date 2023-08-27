@@ -2,7 +2,7 @@ import NextAuth from "next-auth"
 import  {Provider}  from "next-auth/providers"
 import urljoin from "url-join"
 import { refreshAuthToken } from "../../../lib/oauth";
-
+import { Cookies } from "next/dist/server/web/spec-extension/cookies";
 const NIFTORY_AUTH_PROVIDER: Provider = {
   id: "niftory",
   name: "Niftory",
@@ -49,7 +49,11 @@ export default NextAuth({
           refreshToken: account?.refresh_token,
         }
       }
-      console.log(token, user , account);
+      // cookies()
+      console.log("Token:",token)
+
+      console.log("User:",user)
+      console.log("Account:",account)
       // this isn't initial sign-in, so let's see if the token is still valid
       //@ts-ignore
       if (Date.now() < token.authTokenExpiresAt) {

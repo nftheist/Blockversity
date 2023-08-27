@@ -1,7 +1,5 @@
-import { useNftQuery } from "@niftory/sdk"
+import { useNftQuery } from "@niftory/sdk" // Make sure to provide the correct import path
 import { useRouter } from "next/router"
-import Image from "next/image"
-
 import { ComponentWithAuth } from "../../../components/ComponentWithAuth"
 
 const NftPage: ComponentWithAuth = () => {
@@ -10,27 +8,27 @@ const NftPage: ComponentWithAuth = () => {
 
   const [{ data }] = useNftQuery({ variables: { id: nftId } })
 
-  console.log(data);
   const nft = data?.nft
   const model = nft?.model
 
   return (
-    <div>
+    <div> {/* Wrapping JSX element */}
       {model && (
-        <>
-          <Image
-            alt={nft.model?.title}
-            src={nft.model?.content?.poster?.url}
-          ></Image>
-          <h3>{model.title}</h3>
-          <h5>{model.description}</h5>
-          <h5>
-            {nft.blockchainId == null
+        <div> {/* Wrapping JSX element */}
+          <img
+            alt={nft?.model?.title}
+            src={nft?.model?.content?.poster?.url}
+            style={{ width: "20vh" }}
+          />
+          <h1>{model.title}</h1>
+          <p>{model.description}</p>
+          <p>
+            {nft?.blockchainId == null
               ? "Blockchain State: Not yet minted."
-              : `Blockchain State: ID=${nft.blockchainId}, Serial=${nft.serialNumber}`}
-
-          </h5>
-        </>
+              : `Blockchain State: ID=${nft?.blockchainId}, Serial=${nft?.serialNumber}`
+            }
+          </p>
+        </div>
       )}
     </div>
   )

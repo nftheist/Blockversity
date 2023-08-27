@@ -4,21 +4,22 @@ import { getToken } from "next-auth/jwt"
 import { getNiftoryClientForServer } from "../../../../lib/graphql/niftoryClient"
 
 const handler: NextApiHandler = async (req, res) => {
+  console.log(req.cookies.token , "Token");
   try {
-    const { nftModelId } = req.query
+    const { nftmodelid } = req.query
 
     if (req.method !== "POST") {
       res.status(405).end()
       return
     }
 
-    const userToken = await getToken({ req })
-    console.log(userToken);
+    const userToken = await getToken({ req, })
+    console.log(userToken, "User token respone");
     if (!userToken) {
       res.status(401).send("You must be signed in to transfer NFTs")
     }
 
-    if (!nftModelId) {
+    if (!nftmodelid) {
       res.status(400).send("nftModelId is required")
       return
     }
@@ -29,7 +30,7 @@ const handler: NextApiHandler = async (req, res) => {
     // First verify that the user hasn't already claimed an NFT from this model
     const nfts = await client.getNfts({
       userId: userToken.sub,
-      filter: { nftModelIds: [nftModelId as string] },
+      filter: { nftModelIds: [nftmodelid as string] },
     })
     if (nfts?.items?.length > 0) {
       res.status(400).send("You already have an NFT from this model")
@@ -37,7 +38,7 @@ const handler: NextApiHandler = async (req, res) => {
     }
 
     const transferResponse = await client.transfer({
-      nftModelId: nftModelId as string,
+      nftModelId: nftmodelid as string,
       userId: userToken.sub,
     })
 
