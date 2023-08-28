@@ -7,10 +7,13 @@ import { useNftModelQuery, useWalletQuery, WalletState } from "@niftory/sdk";
 import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import WalletPage from "@/components/wallet";
 import { WalletSetup } from "../../../components/WalletSetup/WalletSetup";
 =======
 import styles from '../../../styles/brilliant.module.css';
+=======
+>>>>>>> 852a073 (frontend change_1)
 import WalletPage from "../../../components/wallet";
 
 >>>>>>> 19ec600 (View Your Collection FIxed)
@@ -34,7 +37,7 @@ const Brilliant_page: ComponentWithAuth = () => {
 
   const [isTransferring, setIsTransferring] = useState(false);
   const [transferError, setTransferError] = useState<string>(null);
->>>>>>> 19ec600 (View Your Collection FIxed)
+
 
   const wallet = walletData?.wallet;
   const nftModel = nftModelData?.nftModel;
