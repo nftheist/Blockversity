@@ -4,7 +4,6 @@ import { getToken } from "next-auth/jwt"
 import { getNiftoryClientForServer } from "../../../../lib/graphql/niftoryClient"
 
 const handler: NextApiHandler = async (req, res) => {
-  console.log(req.cookies.token , "Token");
   try {
     const { nftmodelid } = req.query
 
@@ -24,7 +23,6 @@ const handler: NextApiHandler = async (req, res) => {
       return
     }
     
-
     const client = await getNiftoryClientForServer()
 
     // First verify that the user hasn't already claimed an NFT from this model
@@ -41,7 +39,7 @@ const handler: NextApiHandler = async (req, res) => {
       nftModelId: nftmodelid as string,
       userId: userToken.sub,
     })
-
+    console.log(userToken.sub);
     res.status(200).json(transferResponse)
   } catch (e) {
     console.error(e)

@@ -1,10 +1,11 @@
-import { useNftQuery } from "@niftory/sdk" // Make sure to provide the correct import path
+import { useNftQuery } from "@niftory/sdk" 
 import { useRouter } from "next/router"
 import { ComponentWithAuth } from "../../../components/ComponentWithAuth"
 
 const NftPage: ComponentWithAuth = () => {
   const router = useRouter()
-  const nftId = router.query["nftId"]?.toString()
+
+  const nftId = router.query["nftid"]?.toString()
 
   const [{ data }] = useNftQuery({ variables: { id: nftId } })
 

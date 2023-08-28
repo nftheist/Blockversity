@@ -25,6 +25,7 @@ export  function AuthProvider({ children, requireAuth }: AuthComponentProps) {
   const { data: session, status } = useSession() 
   const sessionLoading = status === "loading"
 
+
   const [isAuthenticating, setIsAuthenticating] = useState(false)
   const isLoading = sessionLoading || isAuthenticating
   

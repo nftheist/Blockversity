@@ -15,9 +15,8 @@ export function RegisterWallet() {
   }, [flowUser?.addr, flowUser?.loggedIn, registerWallet]);
 
   const handleRegister = () => {
-    fcl.logIn();
+    fcl.logIn;
   };
-
   return (
     <WalletSetupBox
       text={

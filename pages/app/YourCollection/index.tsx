@@ -7,7 +7,7 @@ import { ComponentWithAuth } from "../../../components/ComponentWithAuth"
 const CollectionPage: ComponentWithAuth = () => {
   const router = useRouter()
   const { session } = useAuthContext()
-  //@ts-ignore
+//@ts-ignore
   const _userId: string = session?.userId as string
   const [{ data }] = useNftsQuery({ variables: { userId: _userId } })
   const nfts = data?.nfts?.items
@@ -18,7 +18,7 @@ const CollectionPage: ComponentWithAuth = () => {
           (nft) =>
             nft && (
               <div key={nft.id} style={{ border: "1px solid #ccc", padding: "16px", textAlign: "center" }}>
-                <a onClick={() => router.push(`/app/collection/${nft.id}`)} style={{ cursor: "pointer", textDecoration: "underline" }}>
+                <a onClick={() => router.push(`/app/YourCollection/${nft.id}`)} style={{ cursor: "pointer", textDecoration: "underline" }}>
                   {nft.model?.title}
                 </a>
               </div>
