@@ -6,7 +6,6 @@ import { useAuthContext } from "../../../hooks/useAuthContext";
 import { useNftModelQuery, useWalletQuery, WalletState } from "@niftory/sdk";
 import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
-import styles from '../../../styles/brilliant.module.css';
 import WalletPage from "../../../components/wallet";
 
 const Brilliant_page: ComponentWithAuth = () => {
