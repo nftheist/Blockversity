@@ -16,7 +16,7 @@ export type WalletSetupProps = WalletSetupStepProps & {
   error: Error;
 };
 
-export function WalletSetup() {
+export  function WalletSetup() {
   const router = useRouter();
 
   const [{ data: contractData, fetching: isLoadingContract }] = useContractQuery();

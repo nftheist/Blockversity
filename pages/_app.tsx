@@ -14,13 +14,17 @@ import { AppProps as NextAppProps } from "next/app"
 import { AuthProvider } from "../components/AuthProvider"
 import { ComponentWithAuth } from "../components/ComponentWithAuth"
 import { NiftoryClientProvider } from "../components/NiftoryClientProvider"
-import { Session } from "inspector";
 import "../components/navbar/navbar.css";
-
+import {config} from "@onflow/fcl"
 type AppProps<P = {}> = NextAppProps<P> & {
   Component:ComponentWithAuth;
 }
-
+config({
+"accessNode.api": "http://localhost:3000",
+"discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn",
+"discovery.wallet.method": "HTTP/POST",
+"flow.network":"testnet"
+})
 const App = ({Component,pageProps:{session,auth, ...pageProps}}:AppProps): JSX.Element => (
   <SessionProvider session={session} refetchInterval={60 * 60 }>
       <AuthProvider requireAuth = {Component.requireAuth}>

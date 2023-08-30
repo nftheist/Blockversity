@@ -12,7 +12,7 @@ const handler: NextApiHandler = async (req, res) => {
       return
     }
 
-    const userToken = await getToken({ req, })
+    const userToken = await getToken({ req })
     console.log(userToken, "User token respone");
     if (!userToken) {
       res.status(401).send("You must be signed in to transfer NFTs")
@@ -48,3 +48,4 @@ const handler: NextApiHandler = async (req, res) => {
 }
 
 export default handler
+
