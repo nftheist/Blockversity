@@ -6,7 +6,6 @@ import { useAuthContext } from "../../../hooks/useAuthContext";
 import { useNftModelQuery, useWalletQuery, WalletState } from "@niftory/sdk";
 import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
-import { initiateFlowPayment, checkTransactionStatus } from "../../../components/FlowTransaction"
 import WalletPage from "@/components/wallet";
 import { WalletSetup } from "../../../components/WalletSetup/WalletSetup";
 const Brilliant_page: ComponentWithAuth = () => {
@@ -32,14 +31,14 @@ const Brilliant_page: ComponentWithAuth = () => {
     setIsTransferring(true);
     setTransferError(null);
     
-    const transactionId = await initiateFlowPayment(390.625, "0x5e126fbbd18295b9");
-    const status = await checkTransactionStatus(transactionId);
+    // const transactionId = await initiateFlowPayment(390.625, "0x5e126fbbd18295b9");
+    // const status = await checkTransactionStatus(transactionId);
 
-    if (status.errorMessage) {
-      setTransferError("Payment failed");
-      setIsTransferring(false);
-      return;
-    }
+    // if (status.errorMessage) {
+    //   setTransferError("Payment failed");
+    //   setIsTransferring(false);
+    //   return;
+    // }
 
     axios
       .post(`/api/nft/${nftmodelid}/transfer`)
