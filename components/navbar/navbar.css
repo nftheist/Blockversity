@@ -1,0 +1,32 @@
+.nav{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    overflow-x: hidden;
+}
+.banner{
+    background: url("../../assets/banner.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:25vw;
+    flex-shrink: 0;
+    margin: 0px;
+    padding:0px;
+    left:0px;
+}
+.logo{
+    position: relative;
+    background: url("../../assets/logo.svg"), rgba(255, 255, 255, 0) 50% ;
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 50%;
+    height: 20%;
+    flex-shrink: 0;
+    margin: 0px;
+    padding:0px;
+    top:13%;
+    left:6.5%;
+}
+
+
