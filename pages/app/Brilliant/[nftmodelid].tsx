@@ -6,17 +6,8 @@ import { useAuthContext } from "../../../hooks/useAuthContext";
 import { useNftModelQuery, useWalletQuery, WalletState } from "@niftory/sdk";
 import Navbar from "../../../components/navbar/Navbar";
 import Random from "../../../components/GetNFTModels/Random";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import WalletPage from "@/components/wallet";
 import { WalletSetup } from "../../../components/WalletSetup/WalletSetup";
-=======
-import styles from '../../../styles/brilliant.module.css';
-=======
->>>>>>> 852a073 (frontend change_1)
 import WalletPage from "../../../components/wallet";
-
->>>>>>> 19ec600 (View Your Collection FIxed)
 const Brilliant_page: ComponentWithAuth = () => {
   const router = useRouter();
   const { session, signIn, isLoading: sessionLoading } = useAuthContext();
@@ -29,15 +20,6 @@ const Brilliant_page: ComponentWithAuth = () => {
   });
 
   const [{ data: walletData, fetching }] = useWalletQuery();
-<<<<<<< HEAD
-=======
-
-  const wallet = walletData?.wallet;
-  const nftModel = nftModelData?.nftModel;
-
-  const [isTransferring, setIsTransferring] = useState(false);
-  const [transferError, setTransferError] = useState<string>(null);
-
 
   const wallet = walletData?.wallet;
   const nftModel = nftModelData?.nftModel;
@@ -73,11 +55,7 @@ const Brilliant_page: ComponentWithAuth = () => {
   const buttonAction = session
     ? wallet?.state === WalletState?.Ready
       ? initiateTransfer
-<<<<<<< HEAD
-      : () => {<WalletSetup />}
-=======
       : () => router.push("/app/wallet")
->>>>>>> 19ec600 (View Your Collection FIxed)
     : signIn;
 
   const buttonText = session
